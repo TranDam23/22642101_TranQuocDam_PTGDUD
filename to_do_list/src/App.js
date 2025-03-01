@@ -3,24 +3,24 @@ import './App.css';
 const todoReducer = (state, action) => {
   switch (action.type) {
     case 'ADD':
-      return [...state, action.payload];
+      return [...state, action.payload]; // Thêm công việc mới vào danh sách
     case 'TOGGLE':
       return state.map(todo =>
         todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
-      );
+      ); // Đánh dấu hoàn thành/chưa hoàn thành
     case 'DELETE':
-      return state.filter(todo => todo.id !== action.payload);
+      return state.filter(todo => todo.id !== action.payload); // Xóa công việc
     case 'SET':
-      return action.payload;
+      return action.payload; // Thiết lập danh sách công việc từ localStorage
     default:
       return state;
   }
 };
 
 const App = () => {
-  const [todos, dispatch] = useReducer(todoReducer, []);
-  const [inputValue, setInputValue] = useState('');
-  const inputRef = useRef();
+  const [todos, dispatch] = useReducer(todoReducer, []); // Sử dụng useReducer để quản lý danh sách công việc
+  const [inputValue, setInputValue] = useState(''); //Lưu giá trị của ô nhập liệu.
+  const inputRef = useRef(); // useRef để focus lại ô nhập sau khi thêm công việc
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem('todos'));
