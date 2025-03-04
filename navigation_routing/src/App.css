@@ -1,0 +1,129 @@
+/* Định dạng chung */
+body {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+  margin: 0;
+  background-color: rgb(54, 232, 54);
+}
+
+
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  color: black;
+}
+
+/* Danh sách người dùng */
+ul {
+  display: flex;
+  justify-content: center; /* Căn giữa danh sách */
+  gap: 20px; /* Khoảng cách giữa các người dùng */
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  padding: 15px;
+  width: 150px; /* Định kích thước ô */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+/* Liên kết */
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: black;
+}
+
+/* Chi tiết người dùng */
+div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: black;
+}
+
+/* Trang lỗi */
+h1 {
+  color: black;
+}
+
+.user-detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background:  rgb(54, 232, 54) ;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  max-width: 900px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.user-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-info h1 {
+  margin: 0;
+  font-size: 24px;
+  color: black;
+}
+
+.user-info p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: black;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Định dạng ảnh */
+.user-image1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
