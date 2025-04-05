@@ -1,0 +1,199 @@
+.messages-section {
+  width: 350px;
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  right: -350px;
+  top: 90px; /* Đưa xuống dưới một chút, cách header 70px */
+  height: calc(100vh - 90px); /* Chiều cao trừ đi header và khoảng cách dưới */
+  overflow-y: auto;
+  transition: right 0.5s ease, box-shadow 0.3s ease;
+  border-radius: 16px 0 0 16px;
+}
+
+.messages-section.show {
+  right: 0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.messages-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.messages-toggle:hover {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.messages-header p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  animation: slideInFromRight 0.5s ease;
+}
+
+.filter-btn {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.filter-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-box {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: slideInFromRight 0.5s ease forwards;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.message-box:hover {
+  background: linear-gradient(45deg, #f0f4f8, #e0f7fa);
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.message-box:hover img {
+  transform: scale(1.1);
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.message-box:hover .name {
+  color: var(--secondary-color);
+}
+
+.star-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.star-checkbox input {
+  display: none;
+}
+
+.star-checkbox svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.star-checkbox input:checked + label svg {
+  fill: #facc15;
+  stroke: #facc15;
+  animation: starPulse 0.5s ease;
+}
+
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.message-line {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.message-line.time {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.no-messages {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

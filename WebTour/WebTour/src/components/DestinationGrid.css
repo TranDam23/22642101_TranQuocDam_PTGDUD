@@ -1,0 +1,108 @@
+.destination-container {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .destination-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  
+  .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Cấu trúc giống với website travel.com.vn */
+  .large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .medium {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  
+  .small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .destination-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .destination-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .destination-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .destination-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .destination-card:hover .destination-overlay {
+    opacity: 1;
+  }
+  
+  .destination-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .explore-btn {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background: #ff5722;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .destination-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .destination-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

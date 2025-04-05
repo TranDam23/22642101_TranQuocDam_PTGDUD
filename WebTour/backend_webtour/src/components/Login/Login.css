@@ -1,0 +1,309 @@
+/* register.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: hsl(0, 0%, 100%);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.login__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid white;
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  display: grid;
+}
+
+.register-container {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid white;
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  display: grid;
+}
+
+.login__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* Bố cục cho form login (1 field trên 1 dòng) */
+#login-form .login__content {
+  display: grid;
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Bố cục cho form đăng ký (2 field trên 1 dòng) */
+#register-form .login__content {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* 2 cột bằng nhau */
+  gap: 1.5rem !important; /* Khoảng cách giữa các field */
+  margin-bottom: 1.5rem !important;
+}
+
+/* Đảm bảo các phần tử chiếm toàn bộ chiều rộng nếu cần */
+.login__check,
+.login__button,
+.login__register {
+  grid-column: 1 / -1; /* Chiếm toàn bộ chiều rộng */
+}
+
+.login__box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+.login__icon,
+.login__eye {
+  font-size: 1.25rem;
+}
+
+.login__input:focus {
+  outline: none;
+  border: none;
+}
+
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.login__box-input {
+  position: relative;
+}
+
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+
+.login__check,
+.login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__check {
+  margin-bottom: 1.5rem;
+}
+
+.login__check-label,
+.login__forgot,
+.login__register {
+  font-size: 0.813rem;
+}
+
+.login__check-group {
+  column-gap: 0.5rem;
+}
+
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.login__forgot {
+  color: hsl(0, 0%, 100%);
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.login__register {
+  text-align: center;
+}
+
+.login__register a {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+/* Input focus move up label */
+.login__input:focus + .login__label {
+  top: -12px;
+  font-size: 0.813rem;
+}
+
+/* Input focus sticky top label */
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+  font-size: 0.813rem;
+}
+
+.login__input[type="select"],
+select.login__input {
+  background: none;
+  color: hsl(80, 86%, 40%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 30px;
+  padding-right: 1.5rem; 
+  border: none;
+}
+
+/* Xóa mũi tên tùy chỉnh (ký tự "\25BC") */
+.login__box-input::after {
+  content: ""; /* Xóa nội dung mũi tên */
+}
+
+#register-province,
+#register-district {
+  border: none !important;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 575px) {
+  #register-form .login__content {
+    grid-template-columns: 1fr !important; 
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .login {
+    justify-content: center;
+  }
+
+  .container {
+    width: 400px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .register-container {
+    width: 700px; 
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .login__title {
+    font-size: 2rem;
+  }
+}
+
+/* Thêm vào Register.css */
+.login__error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Thông báo thành công */
+.login__success {
+  color: #50C878;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Đảm bảo thông báo lỗi hiển thị bên dưới input */
+.login__box .login__error {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}

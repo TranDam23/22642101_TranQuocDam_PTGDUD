@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+.header-custom {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6); /* Gradient xanh đậm đến xanh nhạt */
+  padding: 1.2rem 0; /* Tăng padding để header cao hơn */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Đường viền nhẹ */
+  animation: fadeIn 1s ease-in-out; /* Hiệu ứng fade-in khi tải trang */
+  font-family: "Poppins", sans-serif;
+}
+
+.header-custom.sticky-top {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng khi cuộn */
+}
+
+/* Hiệu ứng fade-in cho header */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo và tên thương hiệu */
+.header-brand {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.header-brand:hover {
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.header-logo {
+  height: 50px !important; /* Kích thước logo */
+  margin-right: 12px;
+  border-radius: 50%; /* Làm logo tròn */
+  border: 2px solid #fff; /* Viền trắng */
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-logo:hover {
+  border-color: #f59e0b; /* Viền cam khi hover */
+  transform: rotate(360deg); /* Hiệu ứng xoay khi hover */
+}
+
+.header-title {
+  font-size: 2rem; /* Kích thước chữ */
+  font-weight: 700;
+  color: #fff; /* Màu trắng */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng chữ */
+  transition: color 0.3s ease;
+}
+
+.header-title:hover {
+  color: #f59e0b; /* Màu cam khi hover */
+}
+
+/* Toggle button cho mobile */
+.header-toggle {
+  border: none;
+  background: #fff !important;
+  color: #1e3a8a !important;
+}
+
+.header-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Nav links */
+.header-nav-link {
+  color: #fff !important; /* Màu chữ trắng */
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header-nav-link:hover {
+  color: #f59e0b !important; /* Màu cam khi hover */
+  transform: translateY(-2px); /* Hiệu ứng nâng lên */
+}
+
+.header-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #f59e0b;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.header-nav-link:hover::after {
+  width: 50%; /* Gạch chân khi hover */
+}
+
+/* NavDropdown */
+.header-nav-dropdown .nav-link {
+  color: #fff !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.header-nav-dropdown .nav-link:hover {
+  color: #f59e0b !important;
+}
+
+.header-nav-dropdown .dropdown-menu {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  animation: slideDown 0.3s ease-in-out; /* Hiệu ứng dropdown mở ra */
+}
+
+/* Hiệu ứng slide-down cho dropdown */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-parent {
+  padding: 0.5rem 0;
+}
+
+.dropdown-title {
+  font-size: 1rem;
+  color: #1e3a8a !important;
+  padding: 0.5rem 1rem;
+  cursor: default;
+}
+
+.submenu {
+  padding: 0.5rem 0;
+  background: #f8f9fa;
+}
+
+.submenu .dropdown-item {
+  font-size: 0.95rem;
+  color: #333;
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.submenu .dropdown-item:hover {
+  background: #1e3a8a;
+  color: #fff !important;
+  transform: translateX(5px); /* Hiệu ứng dịch chuyển khi hover */
+}
+
+/* Login button */
+.header-login-btn {
+  background: #f59e0b !important; /* Màu cam nổi bật */
+  color: #fff !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem !important;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite; /* Hiệu ứng nhấp nháy nhẹ */
+}
+
+.header-login-btn:hover {
+  background: #fff !important;
+  color: #1e3a8a !important;
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng pulse cho nút Đăng nhập */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+/* User Profile (sau khi đăng nhập) */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  border-color: #f59e0b;
+}
+
+.user-name {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.user-name:hover {
+  color: #f59e0b;
+}
+
+/* User Dropdown */
+.header-user-dropdown .nav-link {
+  padding: 0 !important; /* Xóa padding mặc định để căn chỉnh avatar và tên */
+}
+
+.header-user-dropdown .dropdown-menu {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.header-user-dropdown .dropdown-item {
+  font-size: 0.95rem;
+  color: #333;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.header-user-dropdown .dropdown-item:hover {
+  background: #1e3a8a;
+  color: #fff !important;
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .header-custom {
+    padding: 0.8rem 0;
+  }
+
+  .header-nav-link,
+  .header-nav-dropdown .nav-link {
+    padding: 0.5rem 1rem !important;
+    color: #fff !important;
+  }
+
+  .header-nav-dropdown .dropdown-menu {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .submenu {
+    background: transparent;
+  }
+
+  .submenu .dropdown-item {
+    color: #fff !important;
+  }
+
+  .submenu .dropdown-item:hover {
+    background: transparent;
+    color: #f59e0b !important;
+  }
+
+  .header-login-btn {
+    margin: 0.5rem 1rem;
+  }
+
+  .header-user-dropdown .dropdown-menu {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .header-user-dropdown .dropdown-item {
+    color: #333 !important;
+  }
+
+  .header-user-dropdown .dropdown-item:hover {
+    background: #1e3a8a;
+    color: #fff !important;
+  }
+}

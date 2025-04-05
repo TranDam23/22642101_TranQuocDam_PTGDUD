@@ -1,0 +1,312 @@
+/* Login.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+.auth-login * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.auth-login,
+.auth-login__input,
+.auth-login__button {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.auth-login {
+  color: hsl(0, 0%, 100%);
+}
+
+.auth-login__input,
+.auth-login__button {
+  border: none;
+  outline: none;
+}
+
+.auth-login a {
+  text-decoration: none;
+}
+
+/* Wrapper để chứa ảnh nền và form */
+.auth-login-wrapper {
+  position: relative;
+  min-height: 100vh; /* Đảm bảo chiều cao tối thiểu là 100% viewport */
+  width: 100vw; /* Đảm bảo chiều rộng là 100% viewport */
+  overflow: hidden; /* Ẩn phần thừa của ảnh nếu có */
+}
+
+/* Ảnh nền full màn hình */
+.auth-login__img {
+  position: absolute;
+  top: -32px;
+  left: -161px;
+  width: 1529px; /* Full chiều rộng viewport */
+  height: 730px; /* Full chiều cao viewport */
+  object-fit: cover; /* Ảnh phủ kín mà không bị méo */
+  object-position: center;
+  z-index: -1; /* Đặt ảnh phía sau form */
+}
+
+/* Container cho form */
+.auth-login {
+  position: relative;
+  min-height: 100vh;
+  display: flex; /* Sử dụng flex để căn giữa form */
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid white;
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  display: grid;
+}
+
+.auth-register-container {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid white;
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  display: grid;
+}
+
+.auth-login__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* Bố cục cho form login (1 field trên 1 dòng) */
+#login-form .auth-login__content {
+  display: grid;
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Bố cục cho form đăng ký (2 field trên 1 dòng) */
+#register-form .auth-login__content {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* 2 cột bằng nhau */
+  gap: 1.5rem !important; /* Khoảng cách giữa các field */
+  margin-bottom: 1.5rem !important;
+}
+
+/* Đảm bảo các phần tử chiếm toàn bộ chiều rộng nếu cần */
+.auth-login__check,
+.auth-login__button,
+.auth-login__register {
+  grid-column: 1 / -1; /* Chiếm toàn bộ chiều rộng */
+}
+
+.auth-login__box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+.auth-login__icon,
+.auth-login__eye {
+  font-size: 1.25rem;
+}
+
+.auth-login__input:focus {
+  outline: none;
+  border: none;
+}
+
+.auth-login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.auth-login__box-input {
+  position: relative;
+}
+
+.auth-login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.auth-login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.auth-login__box:nth-child(2) .auth-login__input {
+  padding-right: 1.8rem;
+}
+
+.auth-login__check,
+.auth-login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-login__check {
+  margin-bottom: 1.5rem;
+}
+
+.auth-login__check-label,
+.auth-login__forgot,
+.auth-login__register {
+  font-size: 0.813rem;
+}
+
+.auth-login__check-group {
+  column-gap: 0.5rem;
+}
+
+.auth-login__check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.auth-login__forgot {
+  color: hsl(0, 0%, 100%);
+}
+
+.auth-login__forgot:hover {
+  text-decoration: underline;
+}
+
+.auth-login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.auth-login__register {
+  text-align: center;
+}
+
+.auth-login__register a {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+.auth-login__register a:hover {
+  text-decoration: underline;
+}
+
+/* Input focus move up label */
+.auth-login__input:focus + .auth-login__label {
+  top: -12px;
+  font-size: 0.813rem;
+}
+
+/* Input focus sticky top label */
+.auth-login__input:not(:placeholder-shown):not(:focus) + .auth-login__label {
+  top: -12px;
+  font-size: 0.813rem;
+}
+
+.auth-login__input[type="select"],
+select.auth-login__input {
+  background: none;
+  color: hsl(80, 86%, 40%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 500;
+  padding-right: 1.5rem;
+  border: none;
+}
+
+/* Xóa mũi tên tùy chỉnh (ký tự "\25BC") */
+.auth-login__box-input::after {
+  content: ""; /* Xóa nội dung mũi tên */
+}
+
+#register-province,
+#register-district {
+  border: none !important;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 575px) {
+  #register-form .auth-login__content {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .auth-container {
+    width: 400px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .auth-register-container {
+    width: 700px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .auth-login__title {
+    font-size: 2rem;
+  }
+}
+
+/* Thêm thông báo lỗi và thành công */
+.auth-login__error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.auth-login__success {
+  color: #50C878;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: auth-fadeIn 0.5s ease-in-out;
+}
+
+@keyframes auth-fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Đảm bảo thông báo lỗi hiển thị bên dưới input */
+.auth-login__box .auth-login__error {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}

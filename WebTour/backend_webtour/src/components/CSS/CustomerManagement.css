@@ -1,0 +1,110 @@
+.customer-management {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .customer-management h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .customer-management h3::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Đảm bảo bảng có chiều rộng tối thiểu, nhưng không vượt quá container */
+  }
+  
+  .customer-table th,
+  .customer-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap; /* Ngăn văn bản xuống dòng, giúp bảng gọn gàng */
+  }
+  
+  .customer-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .customer-table tr:hover {
+    background-color: #f8fafc;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .status.active {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .status.inactive {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn.edit {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .action-btn.edit:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .action-btn.delete {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .action-btn.delete:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Responsive cho bảng */
+  @media (max-width: 768px) {
+    .customer-table {
+      min-width: 100%; /* Khi màn hình nhỏ, bảng sẽ co lại để vừa container */
+    }
+  
+    .customer-table th,
+    .customer-table td {
+      padding: 8px 10px; /* Giảm padding để tiết kiệm không gian */
+      font-size: 0.9rem;
+    }
+  }

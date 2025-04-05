@@ -1,0 +1,639 @@
+/* app.css */
+
+/* Root */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.dropdown-parent {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: none;
+  padding: 10px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-parent:hover .submenu {
+  display: block;
+}
+
+.dropdown-title {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* TourCard */
+.tour-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tour-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tour-favourites {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tour-favourite {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tour-type {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 193, 7, 0.9);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* BreadcrumbNav */
+.breadcrumb-link {
+  color: grey;
+}
+
+.breadcrumb-link:hover {
+  color: blue !important;
+}
+
+/* Nút đặt tour */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Slider ảnh */
+.carousel-item img {
+  border-radius: 10px;
+}
+
+/* Card đánh giá */
+.card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+/* TourDetail */
+.mainImg {
+  border-radius: 3%;
+}
+
+/* FloatingButton */
+.floating-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.floating-btn,
+.option-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  font-size: 24px;
+}
+
+.floating-btn {
+  background-color: rgb(5, 139, 234);
+}
+
+.option-btn:hover {
+  transform: scale(1.1);
+}
+
+.fb {
+  background-color: #1877F2;
+}
+
+.zalo {
+  background-color: #0088CC;
+}
+
+.chatbot {
+  background-color: #b64ec4;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 3px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  border: 2px solid #00ff00;
+}
+
+/* TourFAQs */
+.faq-question {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 4px;
+  text-align: left;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: "▼";
+  font-size: 16px;
+}
+
+.faq-answer {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 4px;
+}
+
+/* TripInfo */
+.info-card {
+  border: none;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Chatbot */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat-message.guide {
+  justify-content: flex-start;
+}
+
+.chat-message.customer {
+  justify-content: flex-end;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.message-content {
+  max-width: 70%;
+}
+
+.chat-text {
+  padding: 8px 12px;
+  border-radius: 15px;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.chat-message.guide .chat-text {
+  background: #007bff;
+  color: #fff;
+}
+
+.chat-message.customer .chat-text {
+  background: #28a745;
+  color: #fff;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+}
+
+.chatbot-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.chatbot-footer .form-control {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.chatbot-footer .btn {
+  background: #007bff;
+  border: none;
+}
+
+/* SearchFilter */
+.label {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fil {
+  box-shadow: 1px 2px 3px 1px grey;
+}
+
+.success {
+  border: 4px solid green;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+/* StepTT */
+.back-button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-button:hover {
+  color: blue;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+}
+
+.step-label {
+  padding: 15px;
+  border-radius: 30px;
+  border: 2px solid;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.step-label.active {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+  font-weight: bold;
+}
+
+.step-label.inactive {
+  border-color: var(--bs-muted);
+  color: var(--bs-muted);
+}
+
+/* Login */
+.login-page {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* Điều chỉnh để trừ chiều cao header/footer */
+  position: relative;
+  overflow: hidden;
+}
+
+.login-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hình nền */
+.login-page__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Form container */
+.login-container,
+.register-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Tiêu đề */
+.login-page__title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Thông báo lỗi và thành công */
+.login-page__error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-page__success {
+  color: #28a745;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Nội dung form */
+.login-page__content {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Box input */
+.login-page__box {
+  position: relative;
+}
+
+.login-page__box-input {
+  position: relative;
+  width: 100%;
+}
+
+.login-page__icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%); 
+  font-size: 1.2rem;
+  color: #666;
+  z-index: 2; 
+}
+
+/* Input */
+.login-page__input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-page__input:focus {
+  border-color: #007bff;
+}
+
+/* Label */
+.login-page__label {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.login-page__input:focus + .login-page__label,
+.login-page__input:not(:placeholder-shown) + .login-page__label {
+  top: 0;
+  left: 2.5rem;
+  font-size: 0.8rem;
+  color: #007bff;
+  background-color: white;
+  padding: 0 0.2rem;
+}
+
+/* Icon mắt (show/hide password) */
+.login-page__eye {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Checkbox */
+.login-page__check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.login-page__check-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-page__check-input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.login-page__check-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-page__forgot {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-page__forgot:hover {
+  text-decoration: underline;
+}
+
+/* Nút đăng nhập/đăng ký */
+.login-page__button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-page__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-page__button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Link chuyển đổi form */
+.login-page__register {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-page__register a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-page__register a:hover {
+  text-decoration: underline;
+}
+
+/* Select box cho tỉnh/quận */
+.login-page__input[type="select"],
+select.login-page__input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat right 1rem center;
+  background-size: 1rem;
+}
+
+/* Bảo vệ header/footer */
+.header,
+.footer {
+  position: relative;
+  z-index: 10;
+}
+
+.destination-card {
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}

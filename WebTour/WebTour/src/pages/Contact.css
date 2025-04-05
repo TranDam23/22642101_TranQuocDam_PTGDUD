@@ -1,0 +1,138 @@
+/* Import animate.css for animations */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+.contact-container {
+  background-color: #f5f7fa; /* Soft white background */
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(38, 166, 154, 0.1), rgba(255, 111, 97, 0.1));
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.contact-container > .row {
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  height: 4px;
+  width: 80px;
+  background-color: #26A69A !important; /* Teal accent */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.divider:hover {
+  width: 100px;
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff; /* White form background */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(38, 166, 154, 0.2); /* Teal shadow on hover */
+}
+
+.form-control-custom {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-control-custom:focus {
+  box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25); /* Teal focus ring */
+  border-color: #26A69A;
+  background-color: #fff;
+}
+
+.form-control-custom::placeholder {
+  color: #adb5bd;
+}
+
+.form-select {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(38, 166, 154, 0.25);
+  border-color: #26A69A;
+}
+
+.submit-btn {
+  background-color: #FF6F61; /* Coral button */
+  border-color: #FF6F61;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e65b50;
+  border-color: #e65b50;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 111, 97, 0.3); /* Coral shadow on hover */
+}
+
+.contact-info-box {
+  transition: all 0.3s ease;
+}
+
+.contact-info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(38, 166, 154, 0.15);
+  border-color: #26A69A !important;
+}
+
+.contact-info-container {
+  background-color: #e8ecef; /* Light gray for contrast */
+}
+
+.network-btn {
+  border-color: #26A69A;
+  color: #26A69A;
+  transition: all 0.3s ease;
+}
+
+.network-btn:hover {
+  background-color: #26A69A;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(38, 166, 154, 0.2);
+}
+
+.text-primary {
+  color: #26A69A !important; /* Teal for primary text */
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 15px !important;
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
