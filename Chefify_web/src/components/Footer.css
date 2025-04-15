@@ -1,0 +1,37 @@
+.container {
+    max-width: 1400px;
+    /* Giới hạn tối đa là 1400px */
+    width: 100%;
+    /* Chiếm toàn bộ chiều rộng của thẻ cha */
+    margin: 0 auto;
+    /* Canh giữa container trên màn hình */
+    padding: 0 15px;
+    /* Thêm khoảng cách padding để nội dung không bị dính vào mép màn hình */
+    font-size: 12px;
+}
+
+.bg-dark {
+    background-color: #1a1a1a;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.btn-pink {
+    background-color: #ff5e81;
+    color: #fff;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: #ff3e61;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+ul.list-unstyled li {
+    margin-bottom: 0.5rem;
+}

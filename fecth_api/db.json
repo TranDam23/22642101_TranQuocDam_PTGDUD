@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop ASUS Vivobook",
+      "price": 15000000,
+      "description": "Laptop dành cho học sinh, sinh viên"
+    },
+    {
+      "id": "2",
+      "name": "Chuột Logitech",
+      "description": "Chuột có dây siêu nhạy",
+      "price": 250000
+    },
+    {
+      "id": "3",
+      "name": "Bàn phím cơ Akko",
+      "price": 950000,
+      "description": "Bàn phím cơ thiết kế đẹp, gõ êm"
+    },
+    {
+      "id": "0137",
+      "name": "laptop",
+      "description": "asu",
+      "price": 10000000
+    },
+    {
+      "id": "41d9",
+      "name": "Điện thoại",
+      "description": "Opp",
+      "price": 4500000
+    },
+    {
+      "id": "ddeb",
+      "name": "tai nghe",
+      "description": "123",
+      "price": 123
+    },
+    {
+      "id": "fd53",
+      "name": "123",
+      "description": "456",
+      "price": 123
+    }
+  ]
+}

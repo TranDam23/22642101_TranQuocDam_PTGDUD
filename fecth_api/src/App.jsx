@@ -1,37 +1,25 @@
-import PostList from "./component/PostList";
-import UserList from "./component/UserList";
-import UserList_Axios from "./component/UserList_Axios";
-import UserList_part3 from "./component/UserList_part3";
-import { UserProvider } from "./context/UserContext"; 
-import './App.css'
+// App.jsx
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AddProduct from './pages/AddProduct';
+import EditProduct from './pages/EditProduct';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
-    // <div>
-    //   <div> 
-    //     <h1>Ứng dụng Fetch API</h1> 
-    //     <PostList /> 
-    //   </div>
-
-    //   <div className="container mx-auto mt-10"> 
-    //     <h1 className="text-2xl font-bold text-center">Danh sách người dùng</h1> 
-    //     <UserList /> 
-    //   </div>
-
-    //   <div className="container mx-auto mt-10"> 
-    //     <h1 className="text-2xl font-bold text-center mb-4">Danh sách người dùng</h1> 
-    //     <UserList_Axios /> 
-    //   </div>
-    // </div>
-    <UserProvider> 
-      <div className="container mx-auto mt-10"> 
-        <h1 className="text-2xl font-bold text-center mb-4"> 
-          Danh sách người dùng 
-        </h1> 
-        <UserList_part3 /> 
-      </div> 
-    </UserProvider>
-  )
+    <div className="flex justify-center items-center min-h-screen bg-green-100">
+      <div className="max-w-6xl w-full">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/add" element={<AddProduct />} />
+            <Route path="/edit/:id" element={<EditProduct />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+          </Routes>
+        </Router>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

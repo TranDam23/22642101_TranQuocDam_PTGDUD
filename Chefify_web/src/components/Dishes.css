@@ -1,0 +1,28 @@
+/* body {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+} */
+
+.dishes-container {
+    background-color: rgb(249, 249, 249);
+}
+
+.dishes-title {
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+}
+
+.dishes-title h3 {
+    color: rgb(255, 107, 161);
+}
+
+.dishes {
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    /* Đảm bảo không ép chiều cao */
+    gap: 16px;
+}

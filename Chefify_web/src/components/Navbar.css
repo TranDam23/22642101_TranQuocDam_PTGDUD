@@ -1,0 +1,87 @@
+/* Thu nhỏ ô tìm kiếm */
+.search-input {
+    width: 600px;
+    /* Chiều rộng */
+    height: 30px;
+    /* Chiều cao */
+    font-size: 0.8rem;
+    /* Kích thước font */
+    padding: 0.2rem 0.5rem;
+    /* Giảm padding */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+    /* Tăng khoảng cách giữa các mục */
+}
+
+.modal-dialog {
+    display: flex;
+    /* flex-direction: row; */
+    max-width: 55%;
+    max-height: 600px;
+    /* Giới hạn kích thước */
+    /* margin: auto; */
+    /* Canh giữa */
+}
+
+.modal-dialog-left {
+    width: 39%;
+    height: 400px;
+}
+
+.modal-dialog-right {
+    width: 63.1%;
+    height: 400px;
+}
+
+.modal-dialog-left,
+.modal-dialog-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.modal-dialog-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Đảm bảo hình ảnh được thu phóng mà không bị méo */
+    display: block;
+}
+
+
+
+.modal-content {
+    border: none;
+    /* Bỏ đường viền mặc định */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    /* Hiệu ứng đổ bóng */
+    height: auto;
+}
+
+
+.modal-header {
+    border-bottom: none;
+    /* Xóa đường viền dưới của header */
+}
+
+.modal-body {
+    /* font-size: 1rem; */
+    /* line-height: 1.5; */
+    color: #333;
+
+}
+
+.modal-footer {
+    border-top: none;
+    /* Xóa đường viền trên của footer */
+    font-size: 14px;
+}
+
+.modal-footer p {
+    text-align: center;
+}

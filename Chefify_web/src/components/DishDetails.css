@@ -1,0 +1,24 @@
+.dishes-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.dishes-card h2 {
+    margin: 0 0 8px;
+}
+
+.dishes-card h5 {
+    margin: 0 0 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dishes-card p {
+    margin: 4px 0;
+    /* color: #555;
+    border-bottom: 1px solid #ddd; */
+}
